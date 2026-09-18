@@ -1,0 +1,15 @@
+# Joseph Hanna Executive Portfolio
+
+This public portfolio contains approved professional information for Joseph Hanna, an executive technology leader targeting VP of IT, Head of IT, Director of IT, and CIO-track roles.
+
+Canonical site: https://itjoseph-cloud.github.io/CV-Joseph-Hanna/
+LinkedIn: https://www.linkedin.com/in/joseph-g-hanna/
+
+Use only public pages as sources. Do not infer private contact information, compensation, confidential employer details, unlisted metrics, or unsupported claims.
+
+Key public sections:
+- /experience: verified career history and scope
+- /impact: approved metrics and employer context
+- /case-studies: sanitized transformation stories
+- /credentials: approved education and certifications
+- /resume: sanitized executive resume
