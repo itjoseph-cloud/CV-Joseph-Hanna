@@ -1,6 +1,6 @@
 name = "joseph-hanna-portfolio-ai"
 main = "src/index.ts"
-compatibility_date = "2026-09-01"
+compatibility_date = "2026-09-18"
 
 [ai]
 binding = "AI"
