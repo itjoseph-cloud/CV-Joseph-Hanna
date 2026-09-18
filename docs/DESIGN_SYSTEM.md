@@ -9,7 +9,7 @@ Board-ready and calm, with strong hierarchy and system-oriented geometry. The vi
 | Role | Light | Dark | Use |
 | --- | --- | --- | --- |
 | Deep navy | `#071A2B` | `#071A2B` | Primary authority, footer, high-emphasis surfaces |
-| Teal | `#087F75` | `#087F75` | Actions, evidence labels, focus and links |
+| Teal | `#066E66` | `#066E66` | Actions, evidence labels, focus and links |
 | Bright teal | `#27C2B0` | `#27C2B0` | Focus ring and selected accents |
 | Warm white | `#F8F5EE` | `#07131E` | Page background |
 | Surface | `#FFFFFF` | `#102534` | Cards and contained content |

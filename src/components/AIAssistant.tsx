@@ -37,6 +37,6 @@ export default function AIAssistant() {
       <form onSubmit={e => { e.preventDefault(); void ask(input) }}><label className="sr-only" htmlFor="ai-question">Question</label><input id="ai-question" value={input} maxLength={500} onChange={e => setInput(e.target.value)} placeholder="Ask a recruiter question"/><button aria-label="Send question" disabled={busy || !input.trim()}><Send /></button></form>
       <p className="ai-note">Uses approved public content only. No conversation storage. <a href="/CV-Joseph-Hanna/privacy">Details</a></p>
     </section>}
-    <button className="ai-launch" onClick={() => setOpen(!open)} aria-expanded={open}><Bot /> <span>Ask Joseph’s AI assistant</span></button>
+    <button className="ai-launch" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Ask Joseph's AI assistant"><Bot /> <span aria-hidden="true">Ask Joseph’s AI assistant</span></button>
   </div>
 }
