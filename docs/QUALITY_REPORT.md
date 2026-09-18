@@ -22,7 +22,7 @@ The Playwright suite covers desktop and mobile recruiter flows, PDF download, AI
 
 ## Still required before publication
 
-- Lighthouse performance, accessibility, best-practices, and SEO results on the production-equivalent build
+- Passing mobile and desktop Lighthouse results from the final CI run
 - Manual keyboard, screen-reader order, 320 px mobile, tablet, desktop, light-mode, dark-mode, and print review
 - Final screenshots after the browser suite is available
 - Live AI endpoint evaluation using `docs/AI_EVALUATION.md`

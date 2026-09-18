@@ -25,6 +25,19 @@ jobs:
       - run: npm run check:links
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
+      - name: Run mobile and desktop Lighthouse audits
+        run: |
+          mkdir -p reports
+          npm run preview -- --host 127.0.0.1 > /tmp/portfolio-preview.log 2>&1 &
+          preview_pid=$!
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            curl --fail --silent http://127.0.0.1:4173/CV-Joseph-Hanna/ > /dev/null && break
+            sleep 1
+          done
+          npx lighthouse http://127.0.0.1:4173/CV-Joseph-Hanna/ --chrome-flags="--headless --no-sandbox" --output=json --output-path=reports/lighthouse-mobile.json --quiet
+          npx lighthouse http://127.0.0.1:4173/CV-Joseph-Hanna/ --preset=desktop --chrome-flags="--headless --no-sandbox" --output=json --output-path=reports/lighthouse-desktop.json --quiet
+          npm run check:lighthouse
+          kill "$preview_pid"
       - run: npm audit --audit-level=high
       - name: Reject private paths and unresolved placeholders
         run: |
@@ -38,6 +51,10 @@ jobs:
         with:
           name: preview-screenshots
           path: reports/screenshots
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: reports/lighthouse-*.json
 
   worker:
     runs-on: ubuntu-latest
