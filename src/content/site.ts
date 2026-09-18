@@ -42,6 +42,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/joseph-g-hanna/',
   statement: 'I turn business priorities into secure, scalable, practical technology operations.',
   impact: 'More than 20 years leading modernization, cybersecurity, enterprise systems, and resilient IT operations across growing and global organizations.',
+  proof: 'Verified outcomes include 40% lower vulnerability exposure and 99.99% service availability.',
 }
 
 export const impacts: ImpactMetric[] = [

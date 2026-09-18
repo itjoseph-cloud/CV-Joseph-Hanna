@@ -35,7 +35,7 @@ function Metadata() {
 function Home() {
   return <>
     <section className="hero"><div className="shell hero-grid">
-      <div className="hero-copy"><p className="eyebrow">{profile.positioning}</p><h1>{profile.statement}</h1><p className="lede">{profile.impact}</p><p className="location"><MapPin /> {profile.location}</p>
+      <div className="hero-copy"><p className="eyebrow">{profile.positioning}</p><h1>{profile.statement}</h1><p className="lede">{profile.impact}</p><p className="hero-proof"><ShieldCheck /> {profile.proof}</p><p className="location"><MapPin /> {profile.location}</p>
         <div className="actions"><Link className="button" to="/impact">View verified impact <ArrowRight /></Link><a className="button secondary" href="/CV-Joseph-Hanna/resume/Joseph_Hanna_Executive_Resume.pdf" download>Download resume <Download /></a><a className="text-cta" href={profile.linkedin} target="_blank" rel="noreferrer"><ExternalLink /> Connect</a></div>
       </div>
       <div className="portrait-wrap"><div className="portrait-frame"><img src="/CV-Joseph-Hanna/assets/joseph-hanna-headshot.webp" alt="Joseph Hanna, executive technology leader" width="640" height="640" /></div><div className="scope-card"><span>Leadership scope</span><strong>17 subsidiaries</strong><p>1,250 employees supported within one holding group</p></div></div>
