@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
+import { mkdir } from 'node:fs/promises'
 
 test('critical recruiter path and actions work', async ({ page }) => {
   await page.goto('./')
@@ -30,4 +31,13 @@ test('has no serious or critical automated accessibility violations', async ({ p
   await page.goto('./')
   const results = await new AxeBuilder({ page }).analyze()
   expect(results.violations.filter(v => ['serious','critical'].includes(v.impact || ''))).toEqual([])
+})
+
+test('captures the approved preview surfaces', async ({ page }, testInfo) => {
+  await mkdir('reports/screenshots', { recursive: true })
+  await page.goto('./')
+  await page.getByRole('button', { name: /decline analytics/i }).click()
+  await page.screenshot({ path: `reports/screenshots/${testInfo.project.name}-overview.png`, fullPage: true })
+  await page.goto('./case-studies')
+  await page.screenshot({ path: `reports/screenshots/${testInfo.project.name}-case-studies.png`, fullPage: true })
 })

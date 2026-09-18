@@ -16,13 +16,12 @@ Date: 2026-09-18
 - Two-page resume PDF render and visual inspection
 - Approved headshot optimization and visual inspection
 
-## Browser checks prepared but not completed locally
+## Browser checks passed in GitHub Actions
 
-The Playwright suite covers desktop and mobile recruiter flows, PDF download, AI disclosure, image alternative text, and serious/critical axe accessibility findings. The local test-browser download repeatedly timed out in the execution environment. CI installs Chromium and runs the suite on every pull request, so this is a release blocker until CI passes.
+The Playwright suite covers desktop and mobile recruiter flows, PDF download, AI disclosure, image alternative text, and axe accessibility checks. GitHub Actions passed the complete suite with no serious or critical automated accessibility findings. CI also generates mobile and desktop overview and case-study screenshots for review.
 
 ## Still required before publication
 
-- Passing Playwright and axe results in GitHub Actions
 - Lighthouse performance, accessibility, best-practices, and SEO results on the production-equivalent build
 - Manual keyboard, screen-reader order, 320 px mobile, tablet, desktop, light-mode, dark-mode, and print review
 - Final screenshots after the browser suite is available
