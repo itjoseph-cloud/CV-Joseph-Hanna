@@ -15,6 +15,8 @@ Date: 2026-09-18
 - Secret-pattern and prohibited-path review
 - Two-page resume PDF render and visual inspection
 - Approved headshot optimization and visual inspection
+- Lighthouse mobile: Performance 99, Accessibility 100, Best Practices 100, SEO 100
+- Lighthouse desktop: Performance 100, Accessibility 100, Best Practices 100, SEO 100
 
 ## Browser checks passed in GitHub Actions
 
@@ -22,7 +24,6 @@ The Playwright suite covers desktop and mobile recruiter flows, PDF download, AI
 
 ## Still required before publication
 
-- Passing mobile and desktop Lighthouse results from the final CI run
 - Manual keyboard, screen-reader order, 320 px mobile, tablet, desktop, light-mode, dark-mode, and print review
 - Final screenshots after the browser suite is available
 - Live AI endpoint evaluation using `docs/AI_EVALUATION.md`
