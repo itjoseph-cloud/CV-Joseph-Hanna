@@ -10,7 +10,7 @@ An evidence-led executive career portfolio for Joseph Hanna, positioning him for
 - GitHub Pages frontend with no database or server requirement
 - Optional Cloudflare Workers AI endpoint in `worker/`
 - Consent-controlled GA4, disabled unless `VITE_GA_MEASUREMENT_ID` is configured
-- Sanitized two-page PDF resume in `public/resume/`
+- Sanitized three-page executive PDF resume in `public/resume/`
 
 ## Setup and commands
 
