@@ -43,15 +43,15 @@ jobs:
         run: |
           ! git ls-files | grep -E '(^|/)(source-materials|upload|private|docs/private)/'
           ! grep -R "NEEDS JOSEPH CONFIRMATION" src public worker docs
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: site-preview
           path: dist
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: preview-screenshots
           path: reports/screenshots
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: lighthouse-reports
           path: reports/lighthouse-*.json
