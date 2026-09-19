@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://itjoseph-cloud.github.io/CV-Joseph-Hanna/sitemap.xml

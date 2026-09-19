@@ -1,0 +1,9 @@
+{
+  "name": "Joseph Hanna Executive Portfolio",
+  "short_name": "Joseph Hanna",
+  "start_url": "/CV-Joseph-Hanna/",
+  "display": "standalone",
+  "background_color": "#f8f5ee",
+  "theme_color": "#071a2b",
+  "icons": [{ "src": "icons/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

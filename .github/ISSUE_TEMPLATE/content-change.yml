@@ -1,0 +1,15 @@
+name: Content change
+description: Propose an evidence-backed public content correction.
+title: "[Content]: "
+body:
+  - type: textarea
+    id: wording
+    attributes: { label: Proposed public wording }
+    validations: { required: true }
+  - type: dropdown
+    id: approved
+    attributes: { label: Is the supporting claim recorded and approved privately?, options: ['Yes', 'No'] }
+    validations: { required: true }
+  - type: textarea
+    id: notes
+    attributes: { label: Non-sensitive notes, description: Do not attach private sources to this public issue. }

@@ -1,0 +1,15 @@
+name = "joseph-hanna-portfolio-ai"
+main = "src/index.ts"
+compatibility_date = "2026-09-18"
+
+[ai]
+binding = "AI"
+
+[[kv_namespaces]]
+binding = "RATE_LIMITS"
+id = "07090cff105e4cf5b0de21f1bca393d4"
+
+[vars]
+ALLOWED_ORIGIN = "https://itjoseph-cloud.github.io"
+DAILY_LIMIT = "200"
+BURST_LIMIT = "8"
