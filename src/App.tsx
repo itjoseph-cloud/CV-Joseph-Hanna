@@ -4,7 +4,6 @@ import { ArrowRight, CheckCircle2, Download, ExternalLink, MapPin, Printer, Shie
 import Layout from './components/Layout'
 import PageHeader from './components/PageHeader'
 import ImpactCard from './components/ImpactCard'
-import AIAssistant from './components/AIAssistant'
 import { caseStudies, credentials, expertise, impacts, profile, roles, type ImpactCategory } from './content/site'
 
 const base = 'https://itjoseph-cloud.github.io/CV-Joseph-Hanna'
@@ -44,7 +43,6 @@ function Home() {
     <section className="section"><div className="shell"><div className="section-head"><div><p className="eyebrow">Selected outcomes</p><h2>Technology translated into business results</h2></div><Link to="/impact">All verified impact <ArrowRight /></Link></div><div className="metric-grid">{impacts.slice(0, 4).map(m => <ImpactCard key={m.value + m.label} metric={m} />)}</div></div></section>
     <section className="section tinted"><div className="shell"><div className="section-head"><div><p className="eyebrow">Transformation evidence</p><h2>How Joseph leads consequential change</h2></div><Link to="/case-studies">All case studies <ArrowRight /></Link></div><div className="story-grid">{caseStudies.slice(0,3).map(c => <Link className="story-card" key={c.slug} to={`/case-studies/${c.slug}`}><span>{c.employer}</span><h3>{c.title}</h3><p>{c.summary}</p><strong>Read the case study <ArrowRight /></strong></Link>)}</div></div></section>
     <section className="section executive"><div className="shell split"><div><p className="eyebrow">Operating philosophy</p><h2>Practical strategy. Clear ownership. Measurable outcomes.</h2></div><div><p>I lead from business priorities outward: understand the operating constraint, decide what must change, create accountable delivery, and make the result usable for people.</p><Link className="button secondary" to="/about">Leadership approach <ArrowRight /></Link></div></div></section>
-    <AIAssistant />
   </>
 }
 
