@@ -19,6 +19,8 @@ test('navigation, download, and AI disclosure are accessible', async ({ page }) 
   await expect(page.getByText(/approved public portfolio content/i)).toBeVisible()
   await expect(page.getByText(/no conversation storage/i)).toBeVisible()
 
+  const mobileMenu = page.getByRole('button', { name: 'Open navigation' })
+  if (await mobileMenu.isVisible()) await mobileMenu.click()
   await page.getByRole('link', { name: 'Impact', exact: true }).click()
   await expect(page.getByRole('button', { name: /ask joseph.*ai assistant/i })).toBeVisible()
   await expect(page.getByText(/approved public portfolio content/i)).toBeVisible()
