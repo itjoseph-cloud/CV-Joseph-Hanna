@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { ExternalLink, Menu, Moon, Sun, X } from 'lucide-react'
 import { profile } from '../content/site'
+import AIAssistant from './AIAssistant'
 import Consent from './Consent'
 
 const nav = [
@@ -47,6 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </div>
       <div className="shell legal">© {new Date().getFullYear()} Joseph Hanna. Career content and media all rights reserved.</div>
     </footer>
+    <AIAssistant />
     <Consent />
   </>
 }

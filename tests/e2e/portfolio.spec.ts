@@ -15,10 +15,20 @@ test('navigation, download, and AI disclosure are accessible', async ({ page }) 
   await page.goto('./resume')
   const download = page.getByRole('link', { name: /download pdf/i })
   await expect(download).toHaveAttribute('href', /Joseph_Hanna_Executive_Resume\.pdf/)
-  await page.goto('./')
   await page.getByRole('button', { name: /ask joseph.*ai assistant/i }).click()
   await expect(page.getByText(/approved public portfolio content/i)).toBeVisible()
   await expect(page.getByText(/no conversation storage/i)).toBeVisible()
+
+  const mobileMenu = page.getByRole('button', { name: 'Open navigation' })
+  const isMobile = await mobileMenu.isVisible()
+  if (isMobile) {
+    await page.getByRole('button', { name: 'Close AI assistant' }).click()
+    await mobileMenu.click()
+  }
+  await page.getByRole('link', { name: 'Impact', exact: true }).click()
+  await expect(page.getByRole('button', { name: /ask joseph.*ai assistant/i })).toBeVisible()
+  if (isMobile) await page.getByRole('button', { name: /ask joseph.*ai assistant/i }).click()
+  await expect(page.getByText(/approved public portfolio content/i)).toBeVisible()
 })
 
 test('has no obvious missing image alternatives', async ({ page }) => {
