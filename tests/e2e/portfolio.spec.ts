@@ -20,9 +20,14 @@ test('navigation, download, and AI disclosure are accessible', async ({ page }) 
   await expect(page.getByText(/no conversation storage/i)).toBeVisible()
 
   const mobileMenu = page.getByRole('button', { name: 'Open navigation' })
-  if (await mobileMenu.isVisible()) await mobileMenu.click()
+  const isMobile = await mobileMenu.isVisible()
+  if (isMobile) {
+    await page.getByRole('button', { name: 'Close AI assistant' }).click()
+    await mobileMenu.click()
+  }
   await page.getByRole('link', { name: 'Impact', exact: true }).click()
   await expect(page.getByRole('button', { name: /ask joseph.*ai assistant/i })).toBeVisible()
+  if (isMobile) await page.getByRole('button', { name: /ask joseph.*ai assistant/i }).click()
   await expect(page.getByText(/approved public portfolio content/i)).toBeVisible()
 })
 
