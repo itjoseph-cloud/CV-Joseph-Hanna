@@ -36,7 +36,7 @@
     "eslint-plugin-react-refresh": "latest",
     "globals": "latest",
     "jsdom": "latest",
-    "lighthouse": "^13.4.1",
+    "lighthouse": "^13.5.0",
     "typescript": "latest",
     "typescript-eslint": "latest",
     "vitest": "latest"
