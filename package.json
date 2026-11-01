@@ -23,7 +23,7 @@
     "vite": "latest"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.13.0",
+    "@axe-core/playwright": "^4.14.0",
     "@eslint/js": "latest",
     "@playwright/test": "latest",
     "@testing-library/jest-dom": "latest",
@@ -36,7 +36,7 @@
     "eslint-plugin-react-refresh": "latest",
     "globals": "latest",
     "jsdom": "latest",
-    "lighthouse": "^13.4.1",
+    "lighthouse": "^13.6.0",
     "typescript": "latest",
     "typescript-eslint": "latest",
     "vitest": "latest"
